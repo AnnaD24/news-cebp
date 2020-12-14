@@ -1,6 +1,7 @@
 package demo;
 
 import clients.Editor;
+import clients.Reader;
 import rabbit.TopicPublisher;
 import utils.New;
 
@@ -10,11 +11,10 @@ import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
 public class Client2 {
-    public static void main(String[] args) throws IOException, TimeoutException {
-        New news;
-        Editor editor = new Editor();
-        news = new New("auto", new ArrayList<String>(), editor, UUID.randomUUID(), "Schumaer wins");
-        TopicPublisher tp = new TopicPublisher();
-        tp.publishEvent(news, "created");
+    public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
+        Reader  r = new Reader();
+        r.subscribeNews("auto", null);
+        Thread.sleep(15);
+        r.readNews(UUID.randomUUID());
     }
 }

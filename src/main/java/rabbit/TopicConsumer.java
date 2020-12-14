@@ -1,5 +1,6 @@
 package rabbit;
 
+import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.DeliverCallback;
@@ -59,5 +60,6 @@ public class TopicConsumer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("Astept dupa mesaj in clasa");
     }
 }

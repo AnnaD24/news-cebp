@@ -1,21 +1,21 @@
 package demo;
 
+import clients.Editor;
 import rabbit.TopicConsumer;
+import utils.New;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
 public class Client1 {
-    public static void main(String[] args) {
-        try {
-            TopicConsumer consumer1 = new TopicConsumer();
-            consumer1.addFilter("auto", LocalDateTime.of(2020,12,10,12,0));
-            consumer1.run();
-        } catch (IOException | TimeoutException e) {
-            e.printStackTrace();
-        }
-
+    public static void main(String[] args) throws IOException, TimeoutException {
+        Editor editor = new Editor();
+        New news = new New("auto", new ArrayList<String>(), UUID.randomUUID(), "Schumaer wins");
+        System.out.println();
+        editor.addNews(news);
 
     }
 }

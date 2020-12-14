@@ -3,9 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="6ed3d812-0396-443b-9549-007a302ca7bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RabbitMqTest/src/main/java/com/company/Send.java" beforeDir="false" afterPath="$PROJECT_DIR$/RabbitMqTest/src/main/java/com/company/Send.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clients/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clients/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clients/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clients/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Client1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/Client1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Client2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/Client2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbit/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rabbit/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rabbit/TopicConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rabbit/TopicConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/New.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/New.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/clients/Editor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clients/Editor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/clients/Reader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/clients/Reader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/demo/Client1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/demo/Client1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/demo/Client2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/demo/Client2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbit/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rabbit/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbit/TopicConsumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rabbit/TopicConsumer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/rabbit/TopicPublisher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/rabbit/TopicPublisher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/New.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/New.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +56,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.Client2">
+  <component name="RunManager" selected="Application.Client1">
     <configuration name="Client1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="demo.Client1" />
       <module name="news-cebp" />
@@ -72,8 +85,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Client2" />
         <item itemvalue="Application.Client1" />
+        <item itemvalue="Application.Client2" />
       </list>
     </recent_temporary>
   </component>
@@ -99,26 +112,26 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1607952476080" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1607970643630">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1607987001785">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="214" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1607953704399" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607970643630" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1607970643630">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1607987001785" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1607987001784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="214" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1607953704398" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607970643630" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1607970643630">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1607987001784" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1607987001784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="214" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1607953704398" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607970643630" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1607970643630">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1607987001784" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1607987001784">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1607953704399" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607970643630" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1607987001784" />
     <state x="465" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1607969745116">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

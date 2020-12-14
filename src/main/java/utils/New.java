@@ -23,14 +23,12 @@ public class New {
     private ArrayList<String> subdomainList = new ArrayList<String>();
     private LocalDateTime createdDate = LocalDateTime.now();
     private LocalDateTime lastModifiedDate = LocalDateTime.now();
-    private Editor editor;
 
-    public New(String domain, ArrayList<String> subdomainList, Editor editor, UUID newsId, String title) {
+    public New(String domain, ArrayList<String> subdomainList, UUID newsId, String title) {
         this.domain = domain;
         this.title = title;
         this.newsId = newsId;
         this.subdomainList = subdomainList;
-        this.editor = editor;
     }
 
     public void setTitle(String title) {
@@ -64,6 +62,6 @@ public class New {
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, domain, newsId, subdomainList, createdDate, lastModifiedDate, editor);
+        return Objects.hash(title, domain, newsId, subdomainList, createdDate, lastModifiedDate);
     }
 }

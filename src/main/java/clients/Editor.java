@@ -1,17 +1,25 @@
 package clients;
 
 import db.NewsDb;
+import rabbit.QueueConsumer;
+import rabbit.TopicPublisher;
 import utils.New;
 
+import java.io.IOException;
 import java.util.UUID;
+import java.util.concurrent.TimeoutException;
 
 public class Editor {
     private UUID editorId;
     private static NewsDb newsDb = new NewsDb();
-    //PublisherService publisher;
+    private TopicPublisher topicPublisher;
+    private QueueConsumer readNewsQueue;
 
-    public Editor(){
+    public Editor() throws IOException, TimeoutException {
         this.editorId = UUID.randomUUID();
+        topicPublisher = new TopicPublisher();
+        readNewsQueue = new QueueConsumer();
+        readNewsQueue.listen();
     }
 
 //    public int getReaders(){
@@ -20,6 +28,7 @@ public class Editor {
 
     public void addNews(New n){
         newsDb.addNews(n,this.editorId);
+        topicPublisher.publishEvent(n, "created");
     }
 
     public void modifyNewsTitle(New news, String title){

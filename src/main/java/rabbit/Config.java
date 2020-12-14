@@ -12,6 +12,7 @@ public class Config {
     public static String URI = "amqps://b-ef7ef197-6a25-4a45-92f1-5fc10b17481a.mq.us-east-2.amazonaws.com:5671";
     public static String USER = "rabbit";
     public static String secret = "123P@ssw0rd123";
+    public static String QUEUE_NAME = "read_queue";
     public static ConnectionFactory connectionFactory;
 
     static {
