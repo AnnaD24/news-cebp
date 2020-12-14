@@ -2,6 +2,7 @@ package rabbit;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
+import utils.DateFormatter;
 import utils.New;
 
 import java.io.IOException;
@@ -32,10 +33,7 @@ public class TopicPublisher {
 
     private String getRoutingKey (New news) {
         String routingKey = "";
-        LocalDateTime date = news.getCreatedDate();
-        String dateString = "" + date.getDayOfYear() + date.getYear() + date.getHour() + date.getMinute();
-        routingKey += news.getDomain() + "." + dateString;
-
+        routingKey += news.getDomain() + "." + DateFormatter.format(news.getCreatedDate());
         return routingKey;
     }
 }

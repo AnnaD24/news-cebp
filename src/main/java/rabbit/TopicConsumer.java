@@ -3,8 +3,10 @@ package rabbit;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.DeliverCallback;
+import utils.DateFormatter;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.Objects;
 import java.util.concurrent.TimeoutException;
 
@@ -18,7 +20,7 @@ public class TopicConsumer {
         this.queueName = channel.queueDeclare().getQueue();
      }
 
-    public void addFilter(String domain, String date) {
+    public void addFilter(String domain, LocalDateTime date) {
         String routingKey = createRoutingKey(domain, date);
 
         System.out.println("Adding routing key for filter: " + routingKey);
@@ -30,7 +32,7 @@ public class TopicConsumer {
 
     }
 
-    private String createRoutingKey(String domain, String date) {
+    private String createRoutingKey(String domain, LocalDateTime date) {
         String routingKey ="";
 
         if (domain == null)
@@ -38,8 +40,10 @@ public class TopicConsumer {
         else
             routingKey += (domain + ".");
 
-        routingKey += Objects.requireNonNullElse(date, "*");
-
+        if(date == null)
+            routingKey += "*";
+        else
+            routingKey += DateFormatter.format(date);
         return routingKey;
     }
 
