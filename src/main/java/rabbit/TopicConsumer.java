@@ -19,8 +19,11 @@ public class TopicConsumer {
         channel.exchangeDeclare(Config.EXCHANGE_NAME, "topic");
         this.queueName = channel.queueDeclare().getQueue();
      }
-
-    public void addFilter(String domain, LocalDateTime date) {
+    public  void addFilter(String domain, LocalDateTime date, Integer minutes){
+        for(int i=0;i<minutes;i++)
+            addFilter(domain,date.plusMinutes(i));
+    }
+    private void addFilter(String domain, LocalDateTime date) {
         String routingKey = createRoutingKey(domain, date);
 
         System.out.println("Adding routing key for filter: " + routingKey);

@@ -9,14 +9,6 @@ import java.time.LocalDateTime; // Import the LocalDateTime class
 import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter
 
 public class New {
-    public String getDomain() {
-        return domain;
-    }
-
-    public LocalDateTime getCreatedDate() {
-        return createdDate;
-    }
-
     private String title;
     private String domain;
     private final UUID newsId;
@@ -31,6 +23,14 @@ public class New {
         this.newsId = newsId;
         this.subdomainList = subdomainList;
         this.editor = editor;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
 
     public void setTitle(String title) {
