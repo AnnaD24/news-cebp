@@ -63,13 +63,61 @@ public class Client {
         }
     }
 
+    private void editorInterface() {
+        Editor e = null;
+        try {
+            e = new Editor();
+        } catch (IOException | TimeoutException exception) {
+            System.out.println("Failed to initialize client");
+            exception.printStackTrace();
+            System.exit(-1);
+        }
+
+        System.out.println("Logged in as reader");
+        while (true) {
+            System.out.println("Options\n1.Publish news\n2.Modify news domain\n3.Modify news title\n4.Get number of readers\n5.Exit");
+            String opt = this.scanner.nextLine();
+            switch (opt) {
+                case "1":
+                    System.out.println("Adding news...\nWrite news domain:");
+                    String topic = this.scanner.nextLine();
+                    System.out.println("\nWrite news title:");
+                    String title1 = this.scanner.nextLine();
+                    e.addNews(new New(topic,new ArrayList<>(), UUID.randomUUID() , title1));
+                    break;
+                case "2":
+                    System.out.println("Modifying news domain...\nInsert the newsId: ");
+                    String newsId1 = this.scanner.nextLine();
+                    System.out.println("\nWrite new domain: ");
+                    String domain = this.scanner.nextLine();
+                    e.modifyNewsDomain(UUID.fromString(newsId1), domain);
+                    break;
+                case "3":
+                    System.out.println("Modifying news title...\nInsert the newsId: ");
+                    String newsId3 = this.scanner.nextLine();
+                    System.out.println("\nWrite new title: ");
+                    String title3 = this.scanner.nextLine();
+                    e.modifyNewsTitle(UUID.fromString(newsId3), title3);
+                    break;
+                case "4":
+                    System.out.println("Querying current number of readers...\nInsert the newsId: ");
+                    String newsId4 = this.scanner.nextLine();
+                    e.getReadersForNews(UUID.fromString(newsId4));
+                    break;
+                case "5":
+                    System.out.println("Exiting! Good bye!");
+                    System.exit(0);
+            }
+        }
+    }
+
     public void runClient () {
         while (true) {
             System.out.println("Options:\n1.Editor\n2.Reader\n3.Exit");
             int opt = this.scanner.nextInt();
             switch(opt) {
                 case 1:
-                    break;
+                    this.editorInterface();
                 case 2:
                     this.readerInterface();
                 case 3:
@@ -77,5 +125,7 @@ public class Client {
             }
         }
     }
+
+
 
 }
