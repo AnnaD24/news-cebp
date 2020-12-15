@@ -41,24 +41,30 @@ public class Editor {
 
     public void modifyNewsTitle(UUID newsId, String title){
         New n = newsDb.findNews(this.editorId, newsId);
-        String oldTitle = n.getTitle();
-        if (n != null)
+        String oldTitle;
+        if (n != null) {
+            oldTitle = n.getTitle();
             n.setTitle(title);
-        System.out.println("News title modified! Details: id=" + n.getNewsId() +
-                ", domain=" + n.getDomain() +
-                ", title=" + n.getTitle() +
-                ", old domain=" + oldTitle + "\n");
+            System.out.println("News title modified! Details: id=" + n.getNewsId() +
+                    ", domain=" + n.getDomain() +
+                    ", title=" + n.getTitle() +
+                    ", old domain=" + oldTitle + "\n");
+            topicPublisher.publishEvent(n, "ModifiedTitle");
+        }
     }
 
     public void modifyNewsDomain(UUID newsId, String domain){
         New n = newsDb.findNews(this.editorId, newsId);
-        String oldDomain = n.getDomain();
-        if (n != null)
+        String oldDomain;
+        if (n != null) {
+            oldDomain = n.getDomain();
             n.setDomain(domain);
-        System.out.println("News domain modified! Details: id=" + n.getNewsId() +
-                ", domain=" + n.getDomain() +
-                ", old domain=" + oldDomain +
-                ", title=" + n.getTitle() + "\n");
+            System.out.println("News domain modified! Details: id=" + n.getNewsId() +
+                    ", domain=" + n.getDomain() +
+                    ", old domain=" + oldDomain +
+                    ", title=" + n.getTitle() + "\n");
+            topicPublisher.publishEvent(n, "ModifiedDomain");
+        }
     }
 
 
