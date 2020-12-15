@@ -15,13 +15,9 @@ public class QueueConsumer {
         channel.queueDeclare(Config.QUEUE_NAME, false, false, false, null);
     }
 
-    public void listen() {
-        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            String message = new String(delivery.getBody(), "UTF-8");
-            System.out.println(" [x] Received  new read'" + message + "'");
-        };
+    public void listen(DeliverCallback callback) {
         try {
-            channel.basicConsume(Config.QUEUE_NAME, true, deliverCallback, consumerTag -> { });
+            channel.basicConsume(Config.QUEUE_NAME, true, callback, consumerTag -> { });
         } catch (IOException e) {
             e.printStackTrace();
         }

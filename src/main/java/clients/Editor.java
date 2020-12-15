@@ -1,11 +1,13 @@
 package clients;
 
 import db.NewsDb;
+import rabbit.NewsReadCallback;
 import rabbit.QueueConsumer;
 import rabbit.TopicPublisher;
 import utils.New;
 
 import java.io.IOException;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.concurrent.TimeoutException;
 
@@ -19,34 +21,32 @@ public class Editor {
         this.editorId = UUID.randomUUID();
         topicPublisher = new TopicPublisher();
         readNewsQueue = new QueueConsumer();
-        readNewsQueue.listen();
+        readNewsQueue.listen(new NewsReadCallback(newsDb, this.editorId));
     }
 
-//    public int getReaders(){
-//        //publisherService.getReaders()
-//    }
+    public int getReadersForNews(UUID newsId) {
+        New n = newsDb.findNews(this.editorId, newsId);
+        if (n != null)
+            return n.getReadCount();
+        return -1;
+    }
 
     public void addNews(New n){
         newsDb.addNews(n,this.editorId);
         topicPublisher.publishEvent(n, "created");
     }
 
-    public void modifyNewsTitle(New news, String title){
-        if(newsDb.findNews(editorId,news.getNewsId()).isEmpty())
-            return;
-
-        news.setTitle(title);
+    public void modifyNewsTitle(UUID newsId, String title){
+        New n = newsDb.findNews(this.editorId, newsId);
+        if (n != null)
+            n.setTitle(title);
     }
 
-    public void modifyNewsDomain(New news, String domain){
-        if(newsDb.findNews(editorId,news.getNewsId()).isEmpty())
-            return;
-
-        news.setTitle(domain);
+    public void modifyNewsDomain(UUID newsId, String domain){
+        New n = newsDb.findNews(this.editorId, newsId);
+        if (n != null)
+            n.setDomain(domain);
     }
 
-    public void deleteNews(New news){
-        newsDb.deleteNews(this.editorId,news);
-    }
 
 }

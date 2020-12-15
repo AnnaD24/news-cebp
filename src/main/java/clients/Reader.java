@@ -22,8 +22,8 @@ public class Reader {
         topicConsumer.run();
     }
 
-    public void subscribeNews(String topic, LocalDateTime dt){
-        topicConsumer.addFilter(topic, dt);
+    public void subscribeNews(String topic, LocalDateTime d, int period){
+        topicConsumer.addFilter(topic, d, period);
     }
 
     public void readNews(UUID newsId) {
