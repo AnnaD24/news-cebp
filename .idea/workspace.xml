@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed3d812-0396-443b-9549-007a302ca7bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clients/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/rabbit/ReaderCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rabbit/ReaderCallback.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
