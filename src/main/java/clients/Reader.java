@@ -1,6 +1,7 @@
 package clients;
 
 import rabbit.QueuePublisher;
+import rabbit.ReaderCallback;
 import rabbit.TopicConsumer;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ public class Reader {
         this.readerId = UUID.randomUUID();
         topicConsumer = new TopicConsumer();
         readNewsPublisher = new QueuePublisher();
-        topicConsumer.run();
+        topicConsumer.run(new ReaderCallback());
     }
 
     public void subscribeNews(String topic, LocalDateTime d, int period){

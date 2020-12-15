@@ -51,18 +51,12 @@ public class TopicConsumer {
         return routingKey;
     }
 
-    public void run () {
-        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            String message = new String(delivery.getBody(), "UTF-8");
-            System.out.println(" [x] Received '" +
-                    delivery.getEnvelope().getRoutingKey() + "':'" + message + "'");
-        };
+    public void run (DeliverCallback callback) {
         try {
-            channel.basicConsume(queueName, true, deliverCallback, consumerTag -> {
+            channel.basicConsume(queueName, true, callback, consumerTag -> {
             });
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Astept dupa mesaj in clasa");
     }
 }

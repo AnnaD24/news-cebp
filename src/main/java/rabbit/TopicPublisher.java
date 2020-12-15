@@ -21,7 +21,6 @@ public class TopicPublisher {
 
     public void publishEvent (New news, String eventType) {
         String routingKey = getRoutingKey(news);
-        System.out.println("Routing key for news " + news.getNewsId() + ": " + routingKey);
         String message = eventType + ":" + news.getNewsId();
 
         try {

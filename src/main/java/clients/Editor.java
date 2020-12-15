@@ -33,7 +33,7 @@ public class Editor {
 
     public void addNews(New n){
         newsDb.addNews(n,this.editorId);
-        topicPublisher.publishEvent(n, "created");
+        topicPublisher.publishEvent(n, "Created");
     }
 
     public void modifyNewsTitle(UUID newsId, String title){
