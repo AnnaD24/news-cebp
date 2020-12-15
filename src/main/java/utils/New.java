@@ -32,6 +32,10 @@ public class New {
         lock.unlock();
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public int getReadCount() {
         return readCount;
     }
