@@ -26,8 +26,6 @@ public class TopicConsumer {
     }
     private void addFilter(String domain, LocalDateTime date) {
         String routingKey = createRoutingKey(domain, date);
-
-        System.out.println("Adding routing key for filter: " + routingKey);
         try {
             this.channel.queueBind(this.queueName, Config.EXCHANGE_NAME, routingKey);
         } catch (IOException e) {
