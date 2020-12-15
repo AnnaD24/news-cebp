@@ -41,7 +41,7 @@ public class Client {
 
         System.out.println("Logged in as reader");
         while (true) {
-            System.out.println("Options\n1.Subscribe news\n2.Read news\n3.Exit");
+            System.out.println("Options\n1.Subscribe news\n2.Read news\n3.Exit\n");
             int opt = this.scanner.nextInt();
             switch (opt) {
                 case 1:
@@ -76,35 +76,35 @@ public class Client {
         System.out.println("Logged in as editor");
         while (true) {
             System.out.println("Options\n1.Publish news\n2.Modify news domain\n3.Modify news title\n4.Get number of readers\n5.Exit");
-            int opt = this.scanner.nextInt();
+            String opt = this.scanner.nextLine();
             switch (opt) {
-                case 1:
+                case "1":
                     System.out.println("Adding news...\nWrite news domain:");
                     String topic = this.scanner.next();
                     System.out.println("\nWrite news title:");
                     String title1 = this.scanner.next();
                     e.addNews(new New(topic,new ArrayList<>(), UUID.randomUUID() , title1));
                     break;
-                case 2:
+                case "2":
                     System.out.println("Modifying news domain...\nInsert the newsId: ");
                     String newsId1 = this.scanner.next();
                     System.out.println("\nWrite new domain: ");
                     String domain = this.scanner.next();
                     e.modifyNewsDomain(UUID.fromString(newsId1), domain);
                     break;
-                case 3:
+                case "3":
                     System.out.println("Modifying news title...\nInsert the newsId: ");
                     String newsId3 = this.scanner.next();
                     System.out.println("\nWrite new title: ");
                     String title3 = this.scanner.next();
                     e.modifyNewsTitle(UUID.fromString(newsId3), title3);
                     break;
-                case 4:
+                case "4":
                     System.out.println("Querying current number of readers...\nInsert the newsId: ");
                     String newsId4 = this.scanner.next();
                     System.out.println("Readers number=" + e.getReadersForNews(UUID.fromString(newsId4)) + "\n");
                     break;
-                case 5:
+                case "5":
                     System.out.println("Exiting! Good bye!");
                     System.exit(0);
             }
