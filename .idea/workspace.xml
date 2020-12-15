@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ed3d812-0396-443b-9549-007a302ca7bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clients/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clients/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/demo/Client2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/demo/Client2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/rabbit/ReaderCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rabbit/ReaderCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/demo/Client2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/demo/Client2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/New.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/New.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,29 +115,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="549" y="172" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1607989328341" />
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1608046003244">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1608046283860">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046003244" />
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046283860" />
     <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1608037996202" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1608046003244">
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1608046283860">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046003244" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046283860" />
     <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1608037996202" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1608046003243">
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1608046283860">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046003243" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046283860" />
     <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1608037996201" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1608046003244">
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1608046283860">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046003244" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046283860" />
     <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1608037996202" />
-    <state x="481" y="133" key="MultipleFileMergeDialog" timestamp="1607987283074">
+    <state x="481" y="133" key="MultipleFileMergeDialog" timestamp="1608046303050">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
+    <state x="481" y="133" key="MultipleFileMergeDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1608046303050" />
     <state x="481" y="133" key="MultipleFileMergeDialog/0.0.1536.834@0.0.1536.834" timestamp="1607987283074" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1608037436720">
       <screen x="0" y="0" width="1536" height="834" />

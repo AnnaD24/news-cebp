@@ -13,6 +13,6 @@ public class ReaderCallback implements DeliverCallback {
         String newsId = message.split(":")[1];
         String type = message.split(":")[0];
         String domain = delivery.getEnvelope().getRoutingKey().split("\\.")[0];
-        System.out.println("**********\nDomain: " + domain + '\n' + type + ": " + newsId + '\n');
+        System.out.println("**********\nDomain: " + domain + '\n' + "newsId" + ": " + newsId + '\n');
     }
 }
